@@ -58,7 +58,9 @@ class Robot:
             self._state.col -= 1
 
     def back_track(self):
-        self._state = self._history.pop()
+        if len(self._history) > 1:
+            self._history.pop()
+        self._state = self._history[-1]
 
     def state(self):
         return {
