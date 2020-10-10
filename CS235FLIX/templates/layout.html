@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CS235FLIX</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+	
+	<link
+      rel="bookmark"
+	  type="image/x-icon"
+      href="favicon.ico"
+    />
+	
+	<link
+      rel="icon"
+      href="favicon.ico"
+    />
+  </head>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <body>
+    <div id="body">
+      <!-- Include navigation partial. -->
+      {% include 'navigation.html' %}
+
+      <div id="content-2">
+        <!-- Include header partial. -->
+        {% include 'header.html' %}
+
+        <div id="container">
+          <!-- Main content block to be supplied by page. -->
+          {% block content %} {% endblock %}
+
+          <!-- Include sidebar partial. -->
+          {% include 'sidebar.html' %}
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<aside id="sidebar">
+
+    <header>
+        <h1>Editor's picks</h1>
+    </header>
+
+    {% for movie in selected_movies %}
+        <div id="article-container">
+            <a href="{{ movie.hyperlink }}" >
+                <img src={{ movie.image_hyperlink }} class="img-small">
+            </a>
+            <div id="article-description">
+                <h3 style="text-align:center;">{{ movie.title }}, ({{ movie.date }}).</h3>
+            </div>
+        </div>
+    {% endfor %}
+</aside>
